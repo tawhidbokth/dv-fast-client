@@ -10,7 +10,8 @@ const Banner = () => {
     <div>
          <Carousel autoPlay={true} infiniteLoop={true} showThumbs={false}>
                 <div>
-                    <img src={bannerImg1} />
+          <img src={bannerImg1} />
+           
                     
                 </div>
                 <div>
