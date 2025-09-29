@@ -3,6 +3,8 @@ import Banner from '../Banner/Banner';
 import HowItWorks from '../HowItWorks/HowItWorks';
 import OurServices from '../OurServices/OurServices';
 import ClientLogoSlider from '../ClientLogoSlider/ClientLogoSlider';
+import ServiceHighlights from '../ServiceHighlights/ServiceHighlights';
+import BecomeMarchent from '../BecomeMarchent/BecomeMarchent';
 
 const Home = () => {
   return (
@@ -13,6 +15,8 @@ const Home = () => {
       <OurServices></OurServices>
       {/* Additional sections like ClientLogoSlider can be added here */}
       <ClientLogoSlider></ClientLogoSlider>
+      <ServiceHighlights></ServiceHighlights>
+      <BecomeMarchent></BecomeMarchent>
     </div>
   );
 };
