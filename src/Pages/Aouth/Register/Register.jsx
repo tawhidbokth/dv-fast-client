@@ -1,6 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import UseAuth from '../../../Hooks/UseAuth';
+import { Link } from 'react-router';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
   const { register, handleSubmit, formState: { errors } } = useForm()
@@ -19,9 +21,9 @@ const Register = () => {
     .catch(error => console.log(error))
   }
   return (
-    <div className='mt-44'>
+    <div className='mt-44 border'>
       <h1 className='text-2xl font-bold '>Create Your Acount </h1>
-       <form onSubmit={handleSubmit(onSubmit)}>
+       <form  onSubmit={handleSubmit(onSubmit)}>
             <fieldset className="fieldset">
           <label className="label">Email</label>
           <input type="email"  {...register('email', { required: true })} className="input" placeholder="Email" />
@@ -44,7 +46,9 @@ const Register = () => {
           <div><a className="link link-hover">Forgot password?</a></div>
           <button className="btn btn-neutral mt-4">Login</button>
         </fieldset>
+        <p><small>Already you have a acount <Link className='btn btn-link' to={'/login'}>Login</Link> </small></p>
       </form>
+      <SocialLogin></SocialLogin>
     </div>
   );
 };
